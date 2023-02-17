@@ -30,7 +30,7 @@ const EditForm: React.FunctionComponent<EditFormProps> = ({ nodeId }) => {
   return (
     <div className="modal-content">
       <div className="modal-header">
-        <h5 className="modal-title">Add Node</h5>
+        <h5 className="modal-title">Edit Node</h5>
         <button
           type="button"
           className="btn-close"

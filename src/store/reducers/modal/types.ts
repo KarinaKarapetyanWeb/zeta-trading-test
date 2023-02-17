@@ -8,7 +8,7 @@ export enum ModalActionsEnum {
 
 export interface SetModalAction {
   type: ModalActionsEnum.SET_MODAL;
-  payload: React.ReactNode;
+  payload: React.ReactNode | null;
 }
 
 export type ModalAction = SetModalAction;

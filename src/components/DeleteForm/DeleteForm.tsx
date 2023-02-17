@@ -19,6 +19,8 @@ const DeleteForm: React.FunctionComponent<DeleteFormProps> = ({ nodeId }) => {
     deleteNodeWrapped();
   };
 
+  const isBtnDisabled = isDeletingLoading;
+
   useEffect(() => {
     if (deleteError) {
       setModal(<ErrorModal>{deleteError}</ErrorModal>);
@@ -53,6 +55,7 @@ const DeleteForm: React.FunctionComponent<DeleteFormProps> = ({ nodeId }) => {
           type="button"
           className="btn btn-primary"
           onClick={handleDeleteBtnClick}
+          disabled={isBtnDisabled}
         >
           {isDeletingLoading && (
             <span
